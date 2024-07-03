@@ -455,13 +455,13 @@
 //         console.log(key,";-",obje)
 // }
 
-const hellossx={
-        age:17,
-        Name:"pinku"
-}
+// const hellossx={
+//         age:17,
+//         Name:"pinku"
+// }
         // to loop in oobject
 
-for (const [key,value] of hellossx) {
-        console.log(key,":-",value)
-}
+// for (const [key,value] of hellossx) {
+//         console.log(key,":-",value)
+// }
 
