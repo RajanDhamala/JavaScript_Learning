@@ -546,3 +546,12 @@
 //         return item.publish>=1995 && item.genre =="Science"
 // })
 // console.log(userchoice1)
+
+        // insane use of map and filter
+        
+// const num4=[1,2,3,4,5,6,7,8,9,10]
+// const finalno1=num4.map((item)=>item+10)
+//         .map((item)=>item+1)
+//         .filter((item)=>item%2==0)
+// console.log(finalno1)
+  // Day 6 of learning JavaScript
