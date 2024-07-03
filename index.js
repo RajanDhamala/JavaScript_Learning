@@ -185,8 +185,6 @@
 // console.log(obj4)
 // console.log(obj4["1"])
 
-
-
         //OBJECTS INSIDE ARRAY
 // const hellooooo=[
 //     {
@@ -219,11 +217,251 @@
 // console.log(tinderUser.hasOwnProperty("user"))  to check whether key exist or not returns in Boolean
 
 
-const userssssss ={
-    name:"bablu",
-    age:19,
-    inkuminkkupunkius:"hello world"
+// const userssssss ={
+//     name:"bablu",
+//     age:19,
+//     inkuminkkupunkius:"hello world"
+// }
+// console.log(userssssss.age)
+// const {inkuminkkupunkius:essay}=userssssss to not repeat using userssssss.aage ,userssss.name
+// console.log(essay)
+
+        // functions
+
+// here x is refrence to fxn while x() leads to execution of fxn
+// const x=function SayMyNaam(){
+//         console.log("T")
+//         console.log("I")
+//         console.log("N")
+//         console.log("K")
+//         console.log("U")}
+// console.log(x)
+
+// function add(a,b){
+//          return a+=b
+// }
+// console.log(add(2,3))
+
+// Tinku will be overwriten if value is passed through fxn
+// function userlogg(username="Tinku"){  
+//         return `${username} just logged in at ${Date()}`
+// }
+// console.log(userlogg("thinku"))
+
+
+// function CalculatePrice(...num1){
+//         return num1
+// }
+// console.log(CalculatePrice(2,3,4,5))
+
+// function CalculatePrice2(val1,val2,...no1){  ...           
+//         return no1
+// }
+// z=CalculatePrice2(1,2,3,4,4,5,6,7,7)
+// a=0
+// while (a<z.length){
+// console.log(z[a])
+// a++}
+// const user={
+//         username:"ramesh",
+//         passowrd:"ramesh123",
+//         gmail:"Ramesh0123@gmail.com",
+//         lastLoggedin:['Monday','Sunday']
+// }
+
+// function handleObject(anyobject){
+//         console.log(`Username:${user.username} Password:${user.passowrd}`)
+//         // return user.lastLoggedin
+// }
+// handleObject(user)
+
+
+// let String1="hello world"
+// let array1=String1.split("") putting string into array
+// console.log(array1.length)
+
+        // Scope of the variable
+
+// let a=5;
+// var b=7;
+// const c=10;
+// console.log(a)
+// console.log(b)
+// console.log(c)
+// function hello(){
+//         a=10
+//         b=123
+//         console.log(a ,"after")
+//         console.log(b,"after")
+//         console.log(c,"after")
+//         x=2;
+// }
+// hello()
+// console.log(x)
+
+// function one(){
+//         username="Pinku"
+//         function two(){
+//                 website="https://www.youtube.com"
+//                 console.log(username)
+//         }
+//         // console.log(website)
+//         two()
+// }
+// one()
+
+// if (true){
+//         const usernamess="pinkus"
+//         if (usernamess=="pinkus"){
+//                 const websitenme="github"
+//         }
+        // console.log(websitenme)
+// }
+// const user={
+// username:"rajan",
+// price:99,
+// welcomemessage: function(){
+//         console.log(`welcome ${this.username}`)
+//         console.log(this)
+// }}
+// user.welcomemessage()
+// user.username="shyam"
+// user.welcomemessage()
+
+// console.log(this)
+
+// function Chai(){
+//       let username="tinku"
+//         console.log(this)
+        
+// }
+        // functiom and this bata acces parna paidina undefined
+// Chai()
+
+        // Arrow function
+
+// const chai= () =>{
+//         username="pinku"
+//         console.log(this)
+// }
+// chai()
+
+        // Implict return
+        
+// const try1=(a,b) => a+b 
+// console.log(try1(2,3))
+
+        // Immediately Invoked Function Expressions (IIFE)
+        // Named IIFE
+// (function chai(){
+//         console.log("Databse connected")
+// })()
+
+        // Unnamed IIFE
+// ( (name) => {
+//         console.log(`ur name is ${name}`);
+// })("tinku")
+
+        // === to compare Data Type also
+// let one=1
+// let two="1"
+// if (one===two){
+//         console.log("hello world")
+// }else{
+//         console.log("hello raju")
+// }
+
+        // implicit scope
+
+// let balance=200
+// if(balance <=200) console.log("hello bhai"),console.log("kyse ho aap?")
+
+// switch ("*"){
+//         case "+":
+//                 console.log("its plus");
+//                 break;
+//         case "-":
+//                 console.log("its minus");
+//                 break;
+//         case "/":
+//                 console.log("its divide");
+//                 break;
+//         case "*":
+//                 console.log("its multiply");
+//                 break;
+//         default:
+//                 console.log("enter valid syntax")
+// }
+
+        // shift+alt+down array to duplicate selected text
+
+// const usergmail=""
+// if (usergmail){
+//         console.log("access granted to user")
+// }else{
+//         console.log("access denied")
+// }
+
+        // falsy values
+// false,0,-0,"",BigInt=0n,null,undefined,NaN these are all falsy values
+
+//truthy values
+// "0", 'false', " ", [], {}, function(){}
+
+        // to check for empty object
+// try10={}
+// if(Object.keys(try10).length==0) {
+//         console.log("It is empty array")
+// }
+
+        // Nullish Coalescing Operator (??): null undefined
+
+// let val1
+// val1=5 ?? 10
+// val1=null ?? 20
+// val1=undefined ?? 30
+// console.log(val1)
+
+        // Terniary Operator
+        // condition ? true : false
+
+// const iceTeaPrice=200
+// iceTeaPrice >=300 ? console.log("smaller than 201") :console.log("greater than 200")
+
+// for(let i=0;i<=10;i++){
+//         console.log(`${i} hello world`)
+// }
+
+        // forof loop
+
+// const arry=["spiderman","batman","ironman","sandman"]
+// for (const num of arry) {
+//         console.log(num)
+// }
+
+// const hello="hello world"
+// for (const say of hello) {
+//         console.log(`your letter is ${say}`)
+// }
+        // Map
+// const map=new Map()
+// map.set('IN',"NewDElhi")
+// map.set('NP',"Kathmandu")
+// map.set('US',"Washington")
+// map.set('Uk',"london")
+// // console.log(map)
+
+// for (const [key,obje] of map) {
+//         console.log(key,";-",obje)
+// }
+
+const hellossx={
+        age:17,
+        Name:"pinku"
 }
-console.log(userssssss.age)
-const {inkuminkkupunkius:essay}=userssssss
-console.log(essay)
+        // to loop in oobject
+
+for (const [key,value] of hellossx) {
+        console.log(key,":-",value)
+}
+
