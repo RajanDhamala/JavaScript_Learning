@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+        
+        <ul class="parent">
+            <li>JavaScript</li>
+        </ul>
+   
+</body>
+<script>
+    // ananomous fxn
+
+    // ((languageadd)=>{
+    //     const li=document.createElement("li");
+    //     li.innerText=`${languageadd}`;
+    //     document.querySelector(".parent").appendChild(li)
+    // })("python")
+
+    // arrow fxn
+
+    // const addlanguage=(languageadd)=>{
+    //     const li=document.createElement("li")
+    //     li.innerText=`${languageadd}`
+    //     document.body.querySelector(".parent").appendChild(li)
+    // } 
+    // addlanguage("typeScript")
+
+const add= (languageadd)=>{
+        const li=document.createElement("li");
+        li.appendChild(document.createTextNode(languageadd));
+        li.setAttribute("id","hnxm")
+        document.querySelector(".parent").appendChild(li);
+
+    }
+add('C++');
+        // replacing one li with another
+    const replacewith=document.querySelector("#hnxm")
+    console.log(replacewith)
+    const replaceby=document.createElement("Mojo")
+    replaceby.textContent="Mojo"
+    replacewith.replaceWith(replaceby)
+
+</script>
+</html>

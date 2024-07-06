@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-400 ">
+    <div class="">
+    <h1 class="" id="hello">Learning DOM from chai and code</h1>
+    <p class="">learning javascript for webdev career</p>
+    </div>
+
+<div class="parent">
+    <div class="children">Sunday</div>
+    <div class="children">Monday</div>
+    <div class="children">Tuesday</div>
+    <div class="children">Wednesday</div>
+    <div class="children">Thursday</div>
+</div>
+
+</body>
+<script>
+ const parent1=document.querySelector(".parent")
+console.log(parent1)
+console.log(parent1.children[1].textContent="Monday")
+
+for(let i=0;i<parent1.children.length;i++){
+    parent1.children[i].style.color="green";
+    parent1.children[i].style.fontSize="20px";
+    console.log(parent1.children[i].textContent);
+    if (parent1.children[i].textContent=="chai aur code"){
+        parent1.children[i].textContent="Monday";
+    }
+}
+
+console.log(parent1.lastElementChild.innerHTML)
+const children1=document.querySelector(".children")
+console.log(children1.parentElement)
+console.log(children1.nextElementSibling)
+
+console.log(parent1.childNodes)
+</script>
+</html>
