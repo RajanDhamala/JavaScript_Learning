@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#414141] text-white">
+    <h1 class="text-center font-bold">Chai ur Code</h1>
+    <div class="flex justify-center space-x-2">
+    <button class="Start rounded-md bg-blue-500 hover:bg-blue-600 px-2 font-mono text-[14px]   h-[20px] mt-5 border" id="Start">Start</button>
+    <button class="Stop rounded-md bg-blue-500 hover:bg-blue-600 px-2 font-mono text-[14px] h-[20px] mt-5 border border">Stop</button>
+    </div>
+</body>
+<script>
+    const Locate1=document.querySelector("#Start")
+    const Locate2=document.querySelector(".Stop")
+    let Intervalid;
+    
+    const Saydate=(str)=>{
+        console.log(str,Date.now())
+    }
+
+    Locate1.addEventListener("click",(e)=>{
+        Intervalid=setInterval(Saydate,2000,"rajan")
+        console.log(("interval started"))
+    })
+  
+    Locate2.addEventListener("click",(e)=>{
+        clearInterval(Intervalid)
+        console.log("interval stopped")
+    })
+</script>
+</html>
