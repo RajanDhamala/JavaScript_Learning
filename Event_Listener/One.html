@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1465/1465588.png">
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+            <input type="text" class="input mb-5 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-black rounded-md">
+            <button class="rounded-md bg-blue-500 hover:bg-blue-600 px-2 Submit ">Submit</button>
+        </ul>
+   </div>
+</body>
+<script>
+    const child=document.querySelector("#owl")
+    const input=document.querySelector(".input")
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const Submit=document.querySelector(".Submit")
+    const parent=document.querySelector("#images")
+    Submit.addEventListener("click",(e)=>{
+        e.preventDefault();
+        const email=input.value;
+        if(emailRegex.test(email)){
+        console.log("valid email address")
+    }else{
+        console.log("invalid email address")
+    }
+        // console.log(e.type)
+        //  console.log(e.defaultPrevented)
+        // console.log(e.target)        //points the child element actually clicked in container
+        // console.log(e.currentTarget) //always triggers or points the parent elemnt
+        // console.log(e.clientX)
+        // console.log(e.clientY)
+    },false)
+    window.addEventListener("load",(e)=>{
+        console.log(e.timeStamp)
+    })
+
+    // input.addEventListener("keydown",(e)=>{
+    //     console.log(`key pressed: ${e.key}`)
+    // })
+//     child.addEventListener("click",(e)=>{
+//         console.log("clicked on child")
+//         e.stopPropagation()   //Stops from bubbling 
+//     }) 
+//     parent.addEventListener("click",(e)=>{
+//         console.log("parent clicked")
+        
+//     })
+//     document.querySelector("#google").addEventListener("click",(e)=>{
+//         e.preventDefault()
+//         e.stopPropagation()
+//         console.log("hello google")
+//    })
+
+    parent.addEventListener("click",(e)=>{
+        console.log(e.target.tagName)
+        if(e.target.tagName==="IMG"){
+            e.target.parentNode.remove()
+        }else{
+            console.log("select the img")
+        }
+    },false)
+
+</script>
+</html>
