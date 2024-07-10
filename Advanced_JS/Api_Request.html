@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="background-color: #212121;">
+    <div class="flex py-1 space-y-2 flex-col items-center">
+        <h1 class="text-md font-bold text-white text-center">Enter user name</h1>
+<input type="text" name="" id="input" class="bg-gray-200 rounded-md w-44 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<button class="text-white bg-blue-500 font-semibold rounded-md px-2 hover:bg-blue-600" id="submit">Submit</button>
+</div>
+</body>
+<script>
+    const location1=document.querySelector("#input")
+    const location2=document.querySelector("#submit")
+    let Followers;
+    let Img;
+    let username;
+    location2.addEventListener("click",(e)=>{
+        e.preventDefault();
+        console.log("click detected")
+        username=location1.value.trim()
+    
+        const requestUrl = `https://api.github.com/users/${username}`
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUrl)
+        xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const ugot = this.responseText
+            const data=JSON.parse(ugot)
+            console.log(data)
+            let Img=data.avatar_url;
+            let Followers=data.followers;
+            ()=>{
+                document.createElement(`<h1 class="text-white font-bold text-10">${Followers}</h1>`)
+                document.createElement(`<img src="Img size="20"></img>`)
+            }
+        }
+    }
+    xhr.send();})
+  
+    
+    </script>
+</html>
