@@ -33,11 +33,11 @@
             const ugot = this.responseText
             const data=JSON.parse(ugot)
             console.log(data)
-            let Img=data.avatar_url;
-            let Followers=data.followers;
+             Img=data.avatar_url;
+             Followers=data.followers;
             ()=>{
                 document.createElement(`<h1 class="text-white font-bold text-10">${Followers}</h1>`)
-                document.createElement(`<img src="Img size="20"></img>`)
+                document.createElement(`<img src="${Img}" class="size-20"></img>`)
             }
         }
     }
