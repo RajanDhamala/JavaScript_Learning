@@ -25,7 +25,7 @@
         username=location1.value.trim()
     
         const requestUrl = `https://api.github.com/users/${username}`
-        const xhr = new XMLHttpRequest();
+        const xhr = new XMLHttpRequest();    //xmlhttp request
         xhr.open('GET', requestUrl)
         xhr.onreadystatechange = function(){
         console.log(xhr.readyState);
@@ -42,7 +42,5 @@
         }
     }
     xhr.send();})
-  
-    
     </script>
 </html>
