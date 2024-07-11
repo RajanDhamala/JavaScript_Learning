@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="background-color: #212121;">
+    <div class="flex py-1 space-y-2 flex-col items-center">
+        <h1 class="text-md font-bold text-white text-center">Enter user name</h1>
+<input type="text" name="" id="input" class="bg-gray-200 rounded-md w-44 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<button class="text-white bg-blue-500 font-semibold rounded-md px-2 hover:bg-blue-600" id="submit">Submit</button>
+</div>
+</body>
+<script>
+    const location1=document.querySelector("#input")
+    const location2=document.querySelector("#submit")
+    let Followers;
+    let Img;
+    let username;
+    const requestUrl = `https://api.github.com/users/${username}`
+    location2.addEventListener("click",(e)=>{
+        e.preventDefault();
+        console.log("click detected")
+        username=location1.value.trim()
+        console.log(username)
+        const fxn=async ()=>{
+            try{
+            const response=await fetch(`https://api.github.com/users/${username}`)
+            const data=await response.json()
+            console.log(data)
+            return data;
+        }catch(error){
+            console.log("error fetching data",error)
+        }finally{
+            console.log("code executed")
+        }
+        }
+        fxn()
+    }
+   )  
+    </script>
+</html>
